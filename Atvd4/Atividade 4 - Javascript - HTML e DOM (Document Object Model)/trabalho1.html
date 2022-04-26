@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- JS -->
+    <script src="MaskValid.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <h1>Campeonato Nacional de Games 26/06 a 03/07</h1>
+    <h2>Faça já o seu Cadastro</h2>
+<form>
+<div class="alert alert-dismissible alert-info">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <strong>Não será aceito cadastro fora do prazo 18/05 a 25/05</strong>
+</div>
+<div class="form-group">
+  <div class="form-floating mb-3">
+    <input type="name" class="form-control" id="name" autocomplete="off">
+    <label for="floatingInput">Seu Nome</label>
+  </div>
+  <div class="form-group">
+  <div class="form-floating mb-3">
+    <input type="sobrenome" class="form-control" id="sobrenome" autocomplete="off">
+    <label for="floatingInput">Sobrenome</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="nick" class="form-control" id="nick" autocomplete="off">
+    <label for="floatingInput">Nickname  Usado  no  Game</label>
+  </div>
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Data de Nascimento</label></br>
+    <input id="date" type="date">
+</div>
+<div class="form-group">
+    <label for="games">Game que deseja Competir</label>
+    <select class="form-control" id="games">
+      <option>Counter Strike 1.6</option>
+      <option>CS:GO</option>
+      <option>Fortnite</option>
+      <option>Apex Legends</option>
+      <option>Dota 2</option>
+      <option>League of Legends</option>
+      <option>Valorant</option>
+      <option>Rocket League</option>
+    </select>
+</div>
+<label for="mod">Categoria que deseja Competir</label></br>
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
+  <label class="btn btn-outline-primary" for="btnradio1">Amador</label>
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked="">
+  <label class="btn btn-outline-primary" for="btnradio2">Profissional</label>
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked="">
+  <label class="btn btn-outline-primary" for="btnradio3">Pro-Player</label></br>
+</div>
+<div class="form-group">
+    <label for="estados">Seu Estado</label>
+    <select class="form-control" id="estados">
+      <option>AC</option>
+      <option>AL</option>
+      <option>AP</option>
+      <option>AM</option>
+      <option>BA</option>
+      <option>CE</option>
+      <option>DF</option>
+      <option>ES</option>
+      <option>GO</option>
+      <option>MA</option>
+      <option>MT</option>
+      <option>MS</option>
+      <option>MG</option>
+      <option>PA</option>
+      <option>PB</option>
+      <option>PR</option>
+      <option>PE</option>
+      <option>PI</option>
+      <option>RJ</option>
+      <option>RN</option>
+      <option>RS</option>
+      <option>RO</option>
+      <option>RR</option>
+      <option>SC</option>
+      <option>SP</option>
+      <option>SE</option>
+      <option>TO</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="cidade">Cidade</label>
+    <input type="cidade" class="form-control" id="cidade" placeholder="Sua Cidade" autocomplete="off">
+</div>
+<div class="form-group">
+    <label for="bairro">Bairro</label>
+    <input type="bairro" class="form-control" id="bairro" placeholder="Seu Bairro" autocomplete="off">
+</div>
+<div class="form-group">
+    <label for="num">Numero</label>
+    <input type="num" class="form-control" id="num" placeholder="Numero da Casa" autocomplete="off">
+</div>
+<div class="form-group">
+  <label for="cep">CPF</label>
+  <input type="cep" class="form-control" id="cep1" placeholder="Seu CPF" autocomplete="off" maxlength="14" onkeypress="mCpf(this)" onblur="validarCPF(this)"/>
+</div>
+<div class="form-group">
+    <label for="cep">CEP</label>
+    <input type="cep" class="form-control" id="cep1" placeholder="Seu CEP" autocomplete="off" maxlength="10" onkeypress="mCEP(this)"/>
+</div>
+<div class="form-group">
+    <label for="tel">Telefone Fixo</label>
+    <input type="tel" class="form-control" id="tel" placeholder="(12)3909-1999" autocomplete="off" maxlength="13" onkeypress="mTel(this)"/>
+</div>
+<div class="form-group">
+  <label for="num">Celular</label>
+  <input type="num" class="form-control" id="cel1" placeholder="(18)99808-9999" autocomplete="off" onkeyup="mascara('(##)#####-####',this,event)"/>
+</div>
+<div class="form-group">
+    <label for="obs">Observações</label>
+    <textarea class="form-control" id="obs" rows="3"></textarea>
+</div>
+</form>
+<input type="submit" name="tlimpar" value="Limpar"/>
+<button type="button" class="btn btn-success"onclick="alert('Cadastro Realizado Com Sucesso!')">Enviar</button>
